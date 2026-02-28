@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KaGaPi Management — Queue & Chatbot System</title>
+  <meta name="description" content="A modern queue management and chatbot system for local government consultations, developed as a social outreach project by PENS." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress" class="scroll-progress-bar"></div>
+
+  <!-- Navigation -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-icon">◆</span> KaGaPi
+      </a>
+      <ul class="nav-links">
+        <li><a href="#overview" class="nav-link" data-section="overview">Overview</a></li>
+        <li><a href="#chatbot" class="nav-link" data-section="chatbot">Chatbot</a></li>
+        <li><a href="#takeover" class="nav-link" data-section="takeover">Staff Takeover</a></li>
+        <li><a href="#architecture" class="nav-link" data-section="architecture">Architecture</a></li>
+        <li><a href="#deployment" class="nav-link" data-section="deployment">Deployment</a></li>
+      </ul>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ====== HERO ====== -->
+  <section id="hero" class="hero-section">
+    <div class="hero-bg-wrapper">
+      <img src="/images/hero-bg.png" alt="" class="hero-bg-img" />
+      <div class="hero-bg-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-badge reveal-up">🏛️ PENS Social Outreach Project</p>
+      <h1 class="hero-title reveal-up">
+        <span class="gradient-text">KaGaPi</span><br />Management
+      </h1>
+      <p class="hero-subtitle reveal-up">
+        A smart queue management &amp; AI chatbot system built to streamline
+        local government consultations — making public services faster,
+        friendlier, and more accessible.
+      </p>
+      <!-- <div class="hero-stats reveal-up">
+        <div class="stat-item">
+          <span class="stat-number" data-count="6">0</span>
+          <span class="stat-label">Key Milestones</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-count="3">0</span>
+          <span class="stat-label">Core Systems</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-count="100">0</span><span class="stat-suffix">%</span>
+          <span class="stat-label">Automated CI/CD</span>
+        </div>
+      </div> -->
+    </div>
+    <div class="scroll-indicator reveal-up">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- ====== OVERVIEW ====== -->
+  <section id="overview" class="section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">01 — The Mission</span>
+        <h2 class="section-title">Project <span class="gradient-text">Overview</span></h2>
+        <p class="section-description">
+          As part of PENS' social outreach program, we developed a comprehensive
+          digital system that transforms how citizens interact with local government
+          services. KaGaPi combines intelligent queue management with an AI-powered
+          chatbot to eliminate long wait times and communication barriers.
+        </p>
+      </div>
+      <div class="overview-grid">
+        <div class="glass-card reveal-up">
+          <div class="card-icon">🎯</div>
+          <h3>The Problem</h3>
+          <p>Citizens faced too many applications and limited communication information when seeking
+            government consultations, leading to frustration and inefficiency.</p>
+        </div>
+        <div class="glass-card reveal-up">
+          <div class="card-icon">💡</div>
+          <h3>Our Solution</h3>
+          <p>A dual-system approach combining automated queue management with an
+            intelligent chatbot that provides instant responses and seamless human handoff.</p>
+        </div>
+        <div class="glass-card reveal-up">
+          <div class="card-icon">🚀</div>
+          <h3>The Impact</h3>
+          <p>Improved citizen satisfaction and help citizens to get information easily also
+            staff to focus on complex consultations rather than routine queries.</p>
+        </div>
+      </div>
+
+      <div class="milestone-timeline reveal-up">
+        <h3 class="timeline-title">Key Milestones</h3>
+        <div class="timeline">
+          <div class="timeline-item reveal-left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card">
+              <span class="timeline-tag">Phase 1</span>
+              <h4>Queue Management System</h4>
+              <p>Developed core queue management for organized citizen consultations.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal-right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card">
+              <span class="timeline-tag">Phase 2</span>
+              <h4>Dialogflow Chatbot</h4>
+              <p>Integrated Google Dialogflow AI with WebSocket for real-time communication.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal-left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card">
+              <span class="timeline-tag">Phase 3</span>
+              <h4>Staff Takeover</h4>
+              <p>Enabled staff to seamlessly take over chatbot conversations for complex needs.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal-right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card">
+              <span class="timeline-tag">Phase 4</span>
+              <h4>Full-Stack Architecture</h4>
+              <p>Designed and implemented complete frontend and backend with seamless UX.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal-left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card">
+              <span class="timeline-tag">Phase 5</span>
+              <h4>Production Deployment</h4>
+              <p>Deployed on Ubuntu VPS with Docker Watchtower for automated CI/CD.</p>
+            </div>
+          </div>
+          <!-- <div class="timeline-item reveal-right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card">
+              <span class="timeline-tag">Phase 6</span>
+              <h4>Team Collaboration</h4>
+              <p>Collaborated with a multidisciplinary team ensuring reliability and scalability.</p>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CHATBOT INTEGRATION ====== -->
+  <section id="chatbot" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">02 — AI-Powered</span>
+        <h2 class="section-title">Chatbot <span class="gradient-text">Integration</span></h2>
+        <p class="section-description">
+          Built on Google Dialogflow, our chatbot understands natural language queries
+          from citizens and delivers instant, accurate responses through real-time
+          WebSocket connections.
+        </p>
+      </div>
+      <div class="split-layout">
+        <div class="split-content reveal-left">
+          <div class="feature-list">
+            <div class="feature-item glass-card">
+              <div class="feature-icon">🤖</div>
+              <div>
+                <h4>Google Dialogflow NLU</h4>
+                <p>Natural Language Understanding enables the chatbot to interpret citizen
+                  questions in everyday language and map them to correct service intents.</p>
+              </div>
+            </div>
+            <div class="feature-item glass-card">
+              <div class="feature-icon">⚡</div>
+              <div>
+                <h4>WebSocket Real-Time</h4>
+                <p>Instant bidirectional communication ensures zero-delay messaging between
+                  citizens and the chatbot system — no page refreshes needed.</p>
+              </div>
+            </div>
+            <div class="feature-item glass-card">
+              <div class="feature-icon">🔄</div>
+              <div>
+                <h4>Context Awareness</h4>
+                <p>The chatbot maintains conversation context across multiple exchanges,
+                  understanding follow-up questions and building on previous answers.</p>
+              </div>
+            </div>
+            <div class="feature-item glass-card">
+              <div class="feature-icon">📊</div>
+              <div>
+                <h4>Analytics Dashboard</h4>
+                <p>Track conversation metrics, popular queries, and resolution rates to
+                  continuously improve the chatbot's performance.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="split-visual reveal-right">
+          <div class="visual-frame glass-card">
+            <img src="/images/chatbot-flow.png" alt="Chatbot conversation flow diagram" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== STAFF TAKEOVER ====== -->
+  <section id="takeover" class="section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">03 — Human-in-the-Loop</span>
+        <h2 class="section-title">Staff <span class="gradient-text">Takeover</span></h2>
+        <p class="section-description">
+          When conversations require human expertise, staff members can seamlessly take
+          over from the chatbot — ensuring citizens always get the help they need.
+        </p>
+      </div>
+
+      <div class="takeover-flow reveal-up">
+        <div class="flow-step glass-card">
+          <div class="flow-number">1</div>
+          <div class="flow-icon">💬</div>
+          <h4>Citizen Asks</h4>
+          <p>A citizen initiates a conversation through the chatbot interface.</p>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step glass-card">
+          <div class="flow-number">2</div>
+          <div class="flow-icon">🤖</div>
+          <h4>Bot Responds</h4>
+          <p>Dialogflow processes the query and provides an automated response.</p>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step glass-card">
+          <div class="flow-number">3</div>
+          <div class="flow-icon">🔔</div>
+          <h4>Escalation</h4>
+          <p>Complex queries trigger an alert to available staff members.</p>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step glass-card">
+          <div class="flow-number">4</div>
+          <div class="flow-icon">👩‍💼</div>
+          <h4>Staff Takes Over</h4>
+          <p>A staff member joins the chat and continues the conversation personally.</p>
+        </div>
+      </div>
+
+      <!-- <div class="takeover-benefits">
+        <div class="benefit-card glass-card reveal-left">
+          <h4>🎯 Smart Routing</h4>
+          <p>Conversations are automatically routed to the most qualified available staff member
+            based on query type and expertise.</p>
+        </div>
+        <div class="benefit-card glass-card reveal-right">
+          <h4>📋 Full Context</h4>
+          <p>Staff receives the complete conversation history so citizens never have to repeat
+            themselves during handoff.</p>
+        </div>
+        <div class="benefit-card glass-card reveal-left">
+          <h4>⏱️ Queue Priority</h4>
+          <p>Urgent queries are prioritized in the staff queue, ensuring critical issues receive
+            immediate human attention.</p>
+        </div>
+        <div class="benefit-card glass-card reveal-right">
+          <h4>📈 Resolution Tracking</h4>
+          <p>Every takeover is tracked to measure resolution time, satisfaction, and identify
+            areas for chatbot improvement.</p>
+        </div>
+      </div> -->
+    </div>
+  </section>
+
+  <!-- ====== ARCHITECTURE ====== -->
+  <section id="architecture" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">04 — Under the Hood</span>
+        <h2 class="section-title">System <span class="gradient-text">Architecture</span></h2>
+        <p class="section-description">
+          A carefully designed full-stack architecture ensuring seamless user experience,
+          real-time communication, and system reliability at every layer.
+        </p>
+      </div>
+
+      <div class="arch-diagram reveal-up">
+        <div class="visual-frame glass-card">
+          <img src="/images/architecture-diagram.png" alt="System architecture diagram" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="tech-stack-grid">
+        <!-- <div class="tech-category reveal-up">
+          <h3 class="tech-category-title">🖥️ Frontend</h3>
+          <div class="tech-pills">
+            <span class="tech-pill glass-card">HTML5</span>
+            <span class="tech-pill glass-card">CSS3</span>
+            <span class="tech-pill glass-card">JavaScript</span>
+            <span class="tech-pill glass-card">WebSocket Client</span>
+            <span class="tech-pill glass-card">Responsive UI</span>
+          </div>
+        </div> -->
+        <div class="tech-category reveal-up">
+          <h3 class="tech-category-title">⚙️ Backend</h3>
+          <div class="tech-pills">
+            <span class="tech-pill glass-card">Laravel</span>
+            <span class="tech-pill glass-card">Blade</span>
+            <span class="tech-pill glass-card">WebSocket Server</span>
+            <span class="tech-pill glass-card">REST API</span>
+            <span class="tech-pill glass-card">Dialogflow SDK</span>
+          </div>
+        </div>
+        <div class="tech-category reveal-up">
+          <h3 class="tech-category-title">🗄️ Infrastructure</h3>
+          <div class="tech-pills">
+            <span class="tech-pill glass-card">MySQL</span>
+            <span class="tech-pill glass-card">Docker</span>
+            <span class="tech-pill glass-card">Ubuntu VPS</span>
+            <span class="tech-pill glass-card">Watchtower</span>
+            <span class="tech-pill glass-card">Nginx</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== DEPLOYMENT ====== -->
+  <section id="deployment" class="section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">05 — DevOps</span>
+        <h2 class="section-title">Deployment <span class="gradient-text">Pipeline</span></h2>
+        <p class="section-description">
+          Automated and reliable — our CI/CD pipeline ensures every code change is
+          built, tested, and deployed to production without manual intervention.
+        </p>
+      </div>
+
+      <div class="split-layout split-reverse">
+        <div class="split-visual reveal-left">
+          <div class="visual-frame glass-card">
+            <img src="/images/deployment-pipeline.png" alt="CI/CD deployment pipeline" loading="lazy" />
+          </div>
+        </div>
+        <div class="split-content reveal-right">
+          <div class="deploy-steps">
+            <div class="deploy-step glass-card">
+              <div class="deploy-step-num">01</div>
+              <div>
+                <h4>Code Push</h4>
+                <p>Developers push code changes to the Git repository. Each push triggers
+                  the automated pipeline.</p>
+              </div>
+            </div>
+            <div class="deploy-step glass-card">
+              <div class="deploy-step-num">02</div>
+              <div>
+                <h4>Docker Build</h4>
+                <p>The application is automatically containerized using Docker, creating
+                  a consistent, reproducible build environment.</p>
+              </div>
+            </div>
+            <div class="deploy-step glass-card">
+              <div class="deploy-step-num">03</div>
+              <div>
+                <h4>Image Registry</h4>
+                <p>Built Docker images are pushed to the container registry, versioned and
+                  ready for deployment.</p>
+              </div>
+            </div>
+            <div class="deploy-step glass-card">
+              <div class="deploy-step-num">04</div>
+              <div>
+                <h4>Watchtower Auto-Deploy</h4>
+                <p>Docker Watchtower on the Ubuntu VPS detects new images and automatically
+                  pulls and restarts containers with zero downtime.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content reveal-up">
+        <div class="footer-divider"></div>
+        <p class="footer-copy">&copy; 2026 PENS Social Outreach. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
